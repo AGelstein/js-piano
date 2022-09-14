@@ -1,7 +1,6 @@
 const pianoKeys = document.querySelectorAll('.key')
 
 function playSound(newUrl) {
-    console.log(newUrl)
     new Audio(newUrl).play()
 }
 
@@ -13,7 +12,7 @@ pianoKeys.forEach((pianoKey, i) => {
 })
 
 document.onkeydown = function(e) {
-    switch (e.keyCode) {
+    switch (e) {
         case 9:
             playSound('24-piano-keys/key01.mp3');  
             break; 
